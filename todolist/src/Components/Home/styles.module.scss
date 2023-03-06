@@ -7,16 +7,99 @@
     box-shadow: 0 0 9px 0 rgba(165, 165, 165, 0.5);
     background-color: #fff;
 
-    .lavoro{
-        width: 77px;
-        height: 20px;
-        font-family: HelveticaNeue;
-        font-size: 24px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 0.83;
-        letter-spacing: normal;
-        color: #1d1d1b;
+
+    .headersWrapper{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        .lavoro{
+            width: 77px;
+            height: 20px;
+            font-family: HelveticaNeue;
+            font-size: 24px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 0.83;
+            letter-spacing: normal;
+            color: #1d1d1b;
+        }
+        .rectanglesWrapper{
+            display: flex;
+            gap: 10px;
+
+            .rectangleLeft{
+                // width: 120px;
+                height: 30px;
+                // margin: 0 10px 0 0;
+                padding: 8px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                border: solid 0.5px #aaa;
+                background-color: #fff;
+                 .options{
+                    width: 58px;
+                    height: 14px;
+                    // margin: 0 30px 0 0;
+                    font-family: HelveticaNeue;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #1d1d1b;
+                 }
+                 .path{
+                    
+                    margin: 3px 0 3.9px 30px;
+                    color: #aaa;
+                 }
+
+                
+            }
+
+
+            .rectangleRigth{
+                width: 120px;
+                height: 30px;
+                display: flex;
+                align-items: center;justify-content: center;
+                // margin: 0 0 0 10px;
+                padding: 8px 10px;
+                border-radius: 6px;
+                border: solid 0.5px #297096;
+                background-color: rgba(169, 214, 229, 0.6);
+
+                .shape{
+                    width: 14px;
+                    height: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #297096;
+                    margin: 0 7px 0 0;
+                    // border: 1.5px solid #297096;
+                }
+                .nuovaSezione{
+                    width: 79px;
+                    height: 14px;
+                    margin: 0 0 0 7px;
+                    white-space: nowrap;
+                   
+                    font-family: HelveticaNeue;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #297096;
+                 }
+            }
+        }
+
     }
 }
