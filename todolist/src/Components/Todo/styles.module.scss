@@ -15,15 +15,33 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        .shape{
+        .shapeRed{
+            cursor: pointer;
             width: 16px;
             height: 16px;
-           
             border-radius: 50%;
             border:1.5px solid red;
             // background-color: #fe632b;
             
         }
+        .shapeGreen{
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // margin: 2px 8px 7px 0;
+            // padding: 5.1px 3.5px 4.4px 3.5px;
+            border-radius: 50%;
+            background-color: #51b788;
+            color:white;
+            font-weight: 600;
+            font-size: 13px;
+            
+        }
+       
+
         .nomeTask{
             width: 100%;
             // height: 19px;
@@ -44,7 +62,7 @@
     .descTask{
         width: 389px;
         height: 16px;
-        margin-left:24px ;
+        margin-left: 24px;
         font-family: HelveticaNeue;
         font-size: 14px;
         font-weight: normal;
@@ -53,6 +71,57 @@
         line-height: normal;
         letter-spacing: normal;
         color: #1d1d1b;
+    }
+    .descTaskWrapper{
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+        position: relative;
+        
+        .optionDeletedTask{
+         cursor: pointer; 
+         font-weight: 900;
+         color: #969696;
+        }
+        .smallModale{
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            top: -5px;
+            width: 128px;
+            height: 60px;
+            
+            padding: 0 0 8px;
+            border-radius: 6px;
+            border: solid 0.5px #aaa;
+            background-color: #fff;
+            display: none;
+
+            .modificaAttivita, .eliminaAttivita{
+                    width: 128px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // margin: 0 0 8px;
+                    // padding: 8px 10px;
+                    border-radius: 6px;
+                   
+                  
+            }
+            .eliminaAttivita{
+
+            }
+
+            .modificaAttivita:hover, .eliminaAttivita:hover{
+                background-color: #e8e8e8;
+            }
+        }
+
+        .smallModale:hover, .optionDeletedTask:hover + .smallModale{
+            display: block;
+        }
     }
     .timeTask{
         width: 90px;
@@ -67,5 +136,8 @@
         line-height: normal;
         letter-spacing: normal;
         color: #969696;
+    }
+    .lineThrough{
+        text-decoration: line-through;
     }
 }
