@@ -1,12 +1,14 @@
 import { useState, useId } from "react";
+import Footer from "../Footer";
+import Head from "../Head";
 
 import Todo from "../Todo";
 import styles from "./styles.module.scss";
 
 const Home = ({ todo, setTodo }) => {
   const uniqId = useId();
-  const [active, setActive] = useState(false); //modale option predefinito...
-  const [actModal, setActiveModal] = useState(false); //modale add task
+
+  const [actModal, setActModal] = useState(false); //modale add task
   const [modalDeletedItem, setModalDeletedItem] = useState(false); //stato per controllo apertura e chiusura modale di conf. elimina task
   const [callTask, setCallTask] = useState({}); //stato che passa come prop per prendere dsk da eliminare
 
@@ -30,7 +32,7 @@ const Home = ({ todo, setTodo }) => {
     setNameActiviti(""); //
     setDescrpt(""); // imposto gli stati input nuovamente come stringhe vuote per cancellare la task appena creata una volta creata
     setTime(""); //
-    setActiveModal(!actModal); // cambio valore stato in false per chiudere la modale add task una volta terminata la funzione
+    setActModal(!actModal); // cambio valore stato in false per chiudere la modale add task una volta terminata la funzione
   };
 
   //funzione per cancellare task
@@ -81,11 +83,12 @@ const Home = ({ todo, setTodo }) => {
           <div className={styles.modalTitle}>Aggiungi attivita</div>
           <div
             className={styles.closeModal}
-            onClick={() => setActiveModal(!actModal)}
+            onClick={() => setActModal(!actModal)}
           >
             X
           </div>
         </div>
+        {/****************Input*/}
         <div className={styles.inputWrapper}>
           <form className={styles.form} onSubmit={addTodo}>
             <label className={styles.label}>Nome attivita</label>
@@ -131,40 +134,7 @@ const Home = ({ todo, setTodo }) => {
 
       {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
       <header className={styles.headersWrapper}>
-        <h3 className={styles.lavoro}>Lavoro</h3>
-
-        <div className={styles.rectanglesContain}>
-          <div className={styles.rectangleLeftWrapper}>
-            <div
-              className={styles.rectangleLeft}
-              onClick={() => setActive(!active)}
-            >
-              <span className={styles.options}>Predefinito</span>
-              <div className={styles.path}>↓</div>
-            </div>
-
-            <div
-              className={`${styles.rectangleLeftModal} ${
-                active === true ? styles.active : ""
-              }`}
-            >
-              <div className={styles.rectangle}>
-                <span className={styles.tutti}>Tutti</span>
-              </div>
-              <div className={styles.rectangle}>
-                <span className={styles.completati}>Completati</span>
-              </div>
-              <div className={styles.rectangle}>
-                <span className={styles.daCompletare}>Da completare</span>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.rectangleRigth}>
-            <div className={styles.shape}>+</div>
-            <span className={styles.nuovaSezione}>Nuova sezione</span>
-          </div>
-        </div>
+        <Head />
       </header>
 
       {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
@@ -182,13 +152,7 @@ const Home = ({ todo, setTodo }) => {
       </main>
       {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
       <footer className={styles.footerWrapper}>
-        <div
-          className={styles.addTaskButton}
-          onClick={() => setActiveModal(!actModal)}
-        >
-          <span className={styles.shape}>+</span>{" "}
-          <span className={styles.btnText}>Aggiungi attivita</span>
-        </div>
+        <Footer actModal={actModal} setActModal={setActModal} />
       </footer>
     </div>
   );

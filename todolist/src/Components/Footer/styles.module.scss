@@ -1,0 +1,40 @@
+.addTaskButton{
+    cursor: pointer;
+    width: 128px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap:6px;
+    margin: 16px 0 0 2px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: solid 0.5px #fe632b;
+    background-color: #ffe6d4;
+    
+    .shape{
+        width: 14px;
+        height: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3px;
+        border-radius: 50%;
+        border: 1.5px solid #fe632b;
+        color: #fe632b;
+        font-size: 17px;
+    }
+
+    .btnText{
+        width: 87px;
+        height: 14px;
+        // margin: 0 0 0 7px;
+        font-family: HelveticaNeue;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #fe632b;
+    }
+}
