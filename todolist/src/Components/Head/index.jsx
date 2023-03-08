@@ -22,13 +22,13 @@ const Head = () => {
               active === true ? styles.active : ""
             }`}
           >
-            <div className={styles.rectangle}>
+            <div className={`${styles.rectangle} ${styles.borderTopRadius}`}>
               <span className={styles.tutti}>Tutti</span>
             </div>
             <div className={styles.rectangle}>
               <span className={styles.completati}>Completati</span>
             </div>
-            <div className={styles.rectangle}>
+            <div className={`${styles.rectangle} ${styles.borderBottomRadius}`}>
               <span className={styles.daCompletare}>Da completare</span>
             </div>
           </div>

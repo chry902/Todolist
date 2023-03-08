@@ -120,6 +120,7 @@ const Home = ({ todo, setTodo }) => {
               id="time"
               name="time"
               onChange={(e) => setTime(e.target.value)}
+              placeholder="Es: 03/03/2023 09:00"
             />
             <div className={styles.btnWrapper}>
               <input

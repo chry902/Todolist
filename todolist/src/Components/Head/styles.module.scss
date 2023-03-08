@@ -64,7 +64,14 @@
             border-radius: 6px;
             border: solid 0.5px #979797;
             background-color: #fff;
-            
+            .borderTopRadius{
+                border-top-right-radius: 6px;
+                border-top-left-radius: 6px;
+            }
+            .borderBottomRadius{
+                border-bottom-right-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
             .rectangle{
                 width: 120px;
                 height: 30;
@@ -110,11 +117,12 @@
                     line-height: normal;
                     letter-spacing: normal;
                     color: #1d1d1b;
+                   
                  }
                
             }
             .rectangle:hover{
-                border-radius: 6px ;
+                // border-radius: 6px ;
                 border: solid 0.5px #979797;     /*da aggiungere all hover*/
                 background-color: #e8e8e8;
                 // z-index: 333;
