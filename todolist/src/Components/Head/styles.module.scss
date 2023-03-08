@@ -67,8 +67,9 @@
             
             .rectangle{
                 width: 120px;
-                // height: 30px;
+                height: 30;
                 padding: 8px 8px;
+                
 
                 .tutti{
                     width: 23px;
@@ -113,14 +114,16 @@
                
             }
             .rectangle:hover{
-                border-radius: 6px;
+                border-radius: 6px ;
                 border: solid 0.5px #979797;     /*da aggiungere all hover*/
                 background-color: #e8e8e8;
+                // z-index: 333;
             }
         }
 
         .active{
                 display: block !important;
+                z-index: 33;
             }
         
         // .rectangleLeftModal:hover, .rectangleLeft:hover +.rectangleLeftModal{
