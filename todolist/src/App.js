@@ -22,7 +22,7 @@ const mokup = [
     id: 3,
   },
   {
-    name: "contattare aggenzia",
+    name: "contattare agenzia",
     description: "accedere al drive e completare",
     time: "03/02/23 09:00 ",
     id: 4,
