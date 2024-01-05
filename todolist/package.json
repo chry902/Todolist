@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://{chry902}.github.io/{Todolist}",
+  "homepage": "https://chry902.github.io/Todolist",
   "eslintConfig": {
     "extends": [
       "react-app",
